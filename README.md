@@ -1,4 +1,4 @@
-Quarkus Kafka Quickstart
+Quarkus Kafka Quickstart test
 ========================
 
 This project illustrates how Quarkus applications can interact with Apache Kafka using MicroProfile Reactive Messaging.
