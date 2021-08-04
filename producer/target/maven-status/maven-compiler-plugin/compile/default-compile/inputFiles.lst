@@ -1,0 +1,3 @@
+/home/linux/Downloads/kafka-quickstart/producer/src/main/java/org/acme/kafka/producer/QuotesResource.java
+/home/linux/Downloads/kafka-quickstart/producer/src/main/java/org/acme/kafka/model/Quote.java
+/home/linux/Downloads/kafka-quickstart/producer/src/main/java/org/acme/kafka/model/QuoteDeserializer.java

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.acme.kafka.processor.QuoteProcessorTest" time="20.012" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="test.url" value="http://localhost:8081"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/linux/Downloads/kafka-quickstart/processor/target/test-classes:/home/linux/Downloads/kafka-quickstart/processor/target/classes:/home/linux/.m2/repository/io/quarkus/quarkus-smallrye-reactive-messaging-kafka/2.1.0.Final/quarkus-smallrye-reactive-messaging-kafka-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-kafka-client/2.1.0.Final/quarkus-kafka-client-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-arc/2.1.0.Final/quarkus-arc-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/arc/arc/2.1.0.Final/arc-2.1.0.Final.jar:/home/linux/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/home/linux/.m2/repository/org/eclipse/microprofile/context-propagation/microprofile-context-propagation-api/1.2/microprofile-context-propagation-api-1.2.jar:/home/linux/.m2/repository/io/quarkus/quarkus-caffeine/2.1.0.Final/quarkus-caffeine-2.1.0.Final.jar:/home/linux/.m2/repository/com/github/ben-manes/caffeine/caffeine/2.9.2/caffeine-2.9.2.jar:/home/linux/.m2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-kafka/3.7.1/smallrye-reactive-messaging-kafka-3.7.1.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-kafka-api/3.7.1/smallrye-reactive-messaging-kafka-api-3.7.1.jar:/home/linux/.m2/repository/io/opentelemetry/opentelemetry-api/1.4.1/opentelemetry-api-1.4.1.jar:/home/linux/.m2/repository/io/opentelemetry/opentelemetry-context/1.4.1/opentelemetry-context-1.4.1.jar:/home/linux/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.4.1-alpha/opentelemetry-semconv-1.4.1-alpha.jar:/home/linux/.m2/repository/io/quarkus/quarkus-jackson/2.1.0.Final/quarkus-jackson-2.1.0.Final.jar:/home/linux/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.12.4/jackson-databind-2.12.4.jar:/home/linux/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.12.4/jackson-annotations-2.12.4.jar:/home/linux/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.12.4/jackson-core-2.12.4.jar:/home/linux/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.12.4/jackson-datatype-jsr310-2.12.4.jar:/home/linux/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.12.4/jackson-datatype-jdk8-2.12.4.jar:/home/linux/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.12.4/jackson-module-parameter-names-2.12.4.jar:/home/linux/.m2/repository/org/apache/kafka/kafka-clients/2.8.0/kafka-clients-2.8.0.jar:/home/linux/.m2/repository/com/github/luben/zstd-jni/1.4.9-1/zstd-jni-1.4.9-1.jar:/home/linux/.m2/repository/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar:/home/linux/.m2/repository/org/xerial/snappy/snappy-java/1.1.8.1/snappy-java-1.1.8.1.jar:/home/linux/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/linux/.m2/repository/io/vertx/vertx-kafka-client/4.1.2/vertx-kafka-client-4.1.2.jar:/home/linux/.m2/repository/io/vertx/vertx-core/4.1.2/vertx-core-4.1.2.jar:/home/linux/.m2/repository/io/netty/netty-common/4.1.65.Final/netty-common-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-buffer/4.1.65.Final/netty-buffer-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-transport/4.1.65.Final/netty-transport-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-handler/4.1.65.Final/netty-handler-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec/4.1.65.Final/netty-codec-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-handler-proxy/4.1.65.Final/netty-handler-proxy-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec-socks/4.1.65.Final/netty-codec-socks-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec-http/4.1.65.Final/netty-codec-http-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec-http2/4.1.65.Final/netty-codec-http2-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-resolver/4.1.65.Final/netty-resolver-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-resolver-dns/4.1.65.Final/netty-resolver-dns-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec-dns/4.1.65.Final/netty-codec-dns-4.1.65.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-smallrye-reactive-messaging/2.1.0.Final/quarkus-smallrye-reactive-messaging-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-mutiny-reactive-streams-operators/2.1.0.Final/quarkus-mutiny-reactive-streams-operators-2.1.0.Final.jar:/home/linux/.m2/repository/org/eclipse/microprofile/reactive-streams-operators/microprofile-reactive-streams-operators-api/1.0.1/microprofile-reactive-streams-operators-api-1.0.1.jar:/home/linux/.m2/repository/org/eclipse/microprofile/reactive-streams-operators/microprofile-reactive-streams-operators-core/1.0.1/microprofile-reactive-streams-operators-core-1.0.1.jar:/home/linux/.m2/repository/io/quarkus/quarkus-mutiny/2.1.0.Final/quarkus-mutiny-2.1.0.Final.jar:/home/linux/.m2/repository/io/smallrye/reactive/mutiny-reactive-streams-operators/0.19.2/mutiny-reactive-streams-operators-0.19.2.jar:/home/linux/.m2/repository/io/smallrye/reactive/mutiny-smallrye-context-propagation/0.19.2/mutiny-smallrye-context-propagation-0.19.2.jar:/home/linux/.m2/repository/io/smallrye/smallrye-context-propagation/1.2.0/smallrye-context-propagation-1.2.0.jar:/home/linux/.m2/repository/io/smallrye/smallrye-context-propagation-api/1.2.0/smallrye-context-propagation-api-1.2.0.jar:/home/linux/.m2/repository/io/smallrye/smallrye-context-propagation-storage/1.2.0/smallrye-context-propagation-storage-1.2.0.jar:/home/linux/.m2/repository/io/quarkus/quarkus-smallrye-context-propagation/2.1.0.Final/quarkus-smallrye-context-propagation-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-smallrye-reactive-messaging-kotlin/2.1.0.Final/quarkus-smallrye-reactive-messaging-kotlin-2.1.0.Final.jar:/home/linux/.m2/repository/io/vertx/vertx-web/4.1.2/vertx-web-4.1.2.jar:/home/linux/.m2/repository/io/vertx/vertx-web-common/4.1.2/vertx-web-common-4.1.2.jar:/home/linux/.m2/repository/io/vertx/vertx-auth-common/4.1.2/vertx-auth-common-4.1.2.jar:/home/linux/.m2/repository/io/vertx/vertx-bridge-common/4.1.2/vertx-bridge-common-4.1.2.jar:/home/linux/.m2/repository/io/quarkus/quarkus-vertx/2.1.0.Final/quarkus-vertx-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-netty/2.1.0.Final/quarkus-netty-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-vertx-core/2.1.0.Final/quarkus-vertx-core-2.1.0.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec-haproxy/4.1.65.Final/netty-codec-haproxy-4.1.65.Final.jar:/home/linux/.m2/repository/io/smallrye/smallrye-fault-tolerance-vertx/5.2.1/smallrye-fault-tolerance-vertx-5.2.1.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-annotation/1.6.0/smallrye-common-annotation-1.6.0.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-health/3.7.1/smallrye-reactive-messaging-health-3.7.1.jar:/home/linux/.m2/repository/org/eclipse/microprofile/health/microprofile-health-api/3.1/microprofile-health-api-3.1.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-provider/3.7.1/smallrye-reactive-messaging-provider-3.7.1.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-api/3.7.1/smallrye-reactive-messaging-api-3.7.1.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-core/2.11.0/smallrye-mutiny-vertx-core-2.11.0.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-runtime/2.11.0/smallrye-mutiny-vertx-runtime-2.11.0.jar:/home/linux/.m2/repository/io/smallrye/reactive/vertx-mutiny-generator/2.11.0/vertx-mutiny-generator-2.11.0.jar:/home/linux/.m2/repository/io/vertx/vertx-codegen/4.1.2/vertx-codegen-4.1.2.jar:/home/linux/.m2/repository/org/jboss/jandex/2.3.0.Final/jandex-2.3.0.Final.jar:/home/linux/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/home/linux/.m2/repository/io/quarkus/quarkus-junit5/2.1.0.Final/quarkus-junit5-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-bootstrap-core/2.1.0.Final/quarkus-bootstrap-core-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-bootstrap-app-model/2.1.0.Final/quarkus-bootstrap-app-model-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-bootstrap-maven-resolver/2.1.0.Final/quarkus-bootstrap-maven-resolver-2.1.0.Final.jar:/home/linux/.m2/repository/org/apache/maven/maven-embedder/3.8.1/maven-embedder-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-settings/3.8.1/maven-settings-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-core/3.8.1/maven-core-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-artifact/3.8.1/maven-artifact-3.8.1.jar:/home/linux/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar:/home/linux/.m2/repository/org/apache/maven/maven-plugin-api/3.8.1/maven-plugin-api-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-model/3.8.1/maven-model-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-model-builder/3.8.1/maven-model-builder-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-builder-support/3.8.1/maven-builder-support-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-api/1.6.2/maven-resolver-api-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-util/1.6.2/maven-resolver-util-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.3.3/maven-shared-utils-3.3.3.jar:/home/linux/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/linux/.m2/repository/com/google/inject/guice/4.2.1/guice-4.2.1-no_aop.jar:/home/linux/.m2/repository/com/google/guava/guava/30.1.1-jre/guava-30.1.1-jre.jar:/home/linux/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/linux/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/linux/.m2/repository/org/codehaus/plexus/plexus-utils/3.2.1/plexus-utils-3.2.1.jar:/home/linux/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.6.0/plexus-classworlds-2.6.0.jar:/home/linux/.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar:/home/linux/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.4/org.eclipse.sisu.plexus-0.3.4.jar:/home/linux/.m2/repository/org/apache/maven/maven-settings-builder/3.8.1/maven-settings-builder-3.8.1.jar:/home/linux/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.25/plexus-interpolation-1.25.jar:/home/linux/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.4/plexus-sec-dispatcher-1.4.jar:/home/linux/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar:/home/linux/.m2/repository/org/apache/maven/maven-resolver-provider/3.8.1/maven-resolver-provider-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-repository-metadata/3.8.1/maven-repository-metadata-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-spi/1.6.2/maven-resolver-spi-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-impl/1.6.2/maven-resolver-impl-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-connector-basic/1.6.2/maven-resolver-connector-basic-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-transport-wagon/1.6.2/maven-resolver-transport-wagon-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/wagon/wagon-http/3.4.3/wagon-http-3.4.3.jar:/home/linux/.m2/repository/org/apache/maven/wagon/wagon-http-shared/3.4.3/wagon-http-shared-3.4.3.jar:/home/linux/.m2/repository/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar:/home/linux/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/linux/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/linux/.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar:/home/linux/.m2/repository/org/apache/maven/wagon/wagon-provider-api/3.4.3/wagon-provider-api-3.4.3.jar:/home/linux/.m2/repository/org/apache/maven/wagon/wagon-file/3.4.3/wagon-file-3.4.3.jar:/home/linux/.m2/repository/io/quarkus/quarkus-bootstrap-gradle-resolver/2.1.0.Final/quarkus-bootstrap-gradle-resolver-2.1.0.Final.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-io/1.6.0/smallrye-common-io-1.6.0.jar:/home/linux/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.4/org.eclipse.sisu.inject-0.3.4.jar:/home/linux/.m2/repository/io/quarkus/quarkus-test-common/2.1.0.Final/quarkus-test-common-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-core-deployment/2.1.0.Final/quarkus-core-deployment-2.1.0.Final.jar:/home/linux/.m2/repository/org/aesh/readline/2.1/readline-2.1.jar:/home/linux/.m2/repository/org/fusesource/jansi/jansi/1.18/jansi-1.18.jar:/home/linux/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/linux/.m2/repository/io/quarkus/gizmo/gizmo/1.0.9.Final/gizmo-1.0.9.Final.jar:/home/linux/.m2/repository/org/ow2/asm/asm-util/9.1/asm-util-9.1.jar:/home/linux/.m2/repository/org/ow2/asm/asm-tree/9.1/asm-tree-9.1.jar:/home/linux/.m2/repository/org/ow2/asm/asm-analysis/9.1/asm-analysis-9.1.jar:/home/linux/.m2/repository/org/ow2/asm/asm/9.1/asm-9.1.jar:/home/linux/.m2/repository/io/quarkus/quarkus-class-change-agent/2.1.0.Final/quarkus-class-change-agent-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-devtools-utilities/2.1.0.Final/quarkus-devtools-utilities-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-builder/2.1.0.Final/quarkus-builder-2.1.0.Final.jar:/home/linux/.m2/repository/org/junit/platform/junit-platform-launcher/1.7.2/junit-platform-launcher-1.7.2.jar:/home/linux/.m2/repository/io/quarkus/quarkus-jsonp-deployment/2.1.0.Final/quarkus-jsonp-deployment-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-jsonp/2.1.0.Final/quarkus-jsonp-2.1.0.Final.jar:/home/linux/.m2/repository/org/glassfish/jakarta.json/1.1.6/jakarta.json-1.1.6.jar:/home/linux/.m2/repository/org/jboss/logging/commons-logging-jboss-logging/1.0.0.Final/commons-logging-jboss-logging-1.0.0.Final.jar:/home/linux/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.2/junit-jupiter-5.7.2.jar:/home/linux/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.2/junit-jupiter-api-5.7.2.jar:/home/linux/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/linux/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/linux/.m2/repository/org/junit/platform/junit-platform-commons/1.7.2/junit-platform-commons-1.7.2.jar:/home/linux/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.2/junit-jupiter-params-5.7.2.jar:/home/linux/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.2/junit-jupiter-engine-5.7.2.jar:/home/linux/.m2/repository/org/junit/platform/junit-platform-engine/1.7.2/junit-platform-engine-1.7.2.jar:/home/linux/.m2/repository/io/quarkus/quarkus-core/2.1.0.Final/quarkus-core-2.1.0.Final.jar:/home/linux/.m2/repository/jakarta/enterprise/jakarta.enterprise.cdi-api/2.0.2/jakarta.enterprise.cdi-api-2.0.2.jar:/home/linux/.m2/repository/jakarta/el/jakarta.el-api/3.0.3/jakarta.el-api-3.0.3.jar:/home/linux/.m2/repository/jakarta/interceptor/jakarta.interceptor-api/1.2.5/jakarta.interceptor-api-1.2.5.jar:/home/linux/.m2/repository/jakarta/inject/jakarta.inject-api/1.0/jakarta.inject-api-1.0.jar:/home/linux/.m2/repository/io/quarkus/quarkus-ide-launcher/2.1.0.Final/quarkus-ide-launcher-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-development-mode-spi/2.1.0.Final/quarkus-development-mode-spi-2.1.0.Final.jar:/home/linux/.m2/repository/io/smallrye/config/smallrye-config/2.4.2/smallrye-config-2.4.2.jar:/home/linux/.m2/repository/io/smallrye/config/smallrye-config-core/2.4.2/smallrye-config-core-2.4.2.jar:/home/linux/.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/2.0/microprofile-config-api-2.0.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-expression/1.6.0/smallrye-common-expression-1.6.0.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-function/1.6.0/smallrye-common-function-1.6.0.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-constraint/1.6.0/smallrye-common-constraint-1.6.0.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-classloader/1.6.0/smallrye-common-classloader-1.6.0.jar:/home/linux/.m2/repository/io/smallrye/config/smallrye-config-common/2.4.2/smallrye-config-common-2.4.2.jar:/home/linux/.m2/repository/org/jboss/logmanager/jboss-logmanager-embedded/1.0.9/jboss-logmanager-embedded-1.0.9.jar:/home/linux/.m2/repository/org/jboss/logging/jboss-logging-annotations/2.2.1.Final/jboss-logging-annotations-2.2.1.Final.jar:/home/linux/.m2/repository/org/jboss/threads/jboss-threads/3.4.0.Final/jboss-threads-3.4.0.Final.jar:/home/linux/.m2/repository/org/jboss/slf4j/slf4j-jboss-logmanager/1.1.0.Final/slf4j-jboss-logmanager-1.1.0.Final.jar:/home/linux/.m2/repository/org/graalvm/sdk/graal-sdk/21.1.0/graal-sdk-21.1.0.jar:/home/linux/.m2/repository/org/wildfly/common/wildfly-common/1.5.4.Final-format-001/wildfly-common-1.5.4.Final-format-001.jar:/home/linux/.m2/repository/io/quarkus/quarkus-bootstrap-runner/2.1.0.Final/quarkus-bootstrap-runner-2.1.0.Final.jar:/home/linux/.m2/repository/com/thoughtworks/xstream/xstream/1.4.17/xstream-1.4.17.jar:/home/linux/.m2/repository/io/github/x-stream/mxparser/1.2.1/mxparser-1.2.1.jar:/home/linux/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-in-memory/3.7.1/smallrye-reactive-messaging-in-memory-3.7.1.jar:/home/linux/.m2/repository/org/jboss/logging/jboss-logging/3.4.2.Final/jboss-logging-3.4.2.Final.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-converter-api/2.6.0/smallrye-reactive-converter-api-2.6.0.jar:/home/linux/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/linux/.m2/repository/io/smallrye/reactive/mutiny/0.19.2/mutiny-0.19.2.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Asia/Karachi"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/linux/Downloads/kafka-quickstart/processor/target/surefire/surefirebooter6562396036037876866.jar /home/linux/Downloads/kafka-quickstart/processor/target/surefire 2021-08-04T10-42-14_574-jvmRun1 surefire4857163044470537020tmp surefire_18899512788635716323tmp"/>
+    <property name="maven.home" value="/home/linux/.m2/wrapper/dists/apache-maven-3.8.1-bin/2l5mhf2pq2clrde7f7qp1rdt5m/apache-maven-3.8.1"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/linux/Downloads/kafka-quickstart/processor/target/test-classes:/home/linux/Downloads/kafka-quickstart/processor/target/classes:/home/linux/.m2/repository/io/quarkus/quarkus-smallrye-reactive-messaging-kafka/2.1.0.Final/quarkus-smallrye-reactive-messaging-kafka-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-kafka-client/2.1.0.Final/quarkus-kafka-client-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-arc/2.1.0.Final/quarkus-arc-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/arc/arc/2.1.0.Final/arc-2.1.0.Final.jar:/home/linux/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/home/linux/.m2/repository/org/eclipse/microprofile/context-propagation/microprofile-context-propagation-api/1.2/microprofile-context-propagation-api-1.2.jar:/home/linux/.m2/repository/io/quarkus/quarkus-caffeine/2.1.0.Final/quarkus-caffeine-2.1.0.Final.jar:/home/linux/.m2/repository/com/github/ben-manes/caffeine/caffeine/2.9.2/caffeine-2.9.2.jar:/home/linux/.m2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-kafka/3.7.1/smallrye-reactive-messaging-kafka-3.7.1.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-kafka-api/3.7.1/smallrye-reactive-messaging-kafka-api-3.7.1.jar:/home/linux/.m2/repository/io/opentelemetry/opentelemetry-api/1.4.1/opentelemetry-api-1.4.1.jar:/home/linux/.m2/repository/io/opentelemetry/opentelemetry-context/1.4.1/opentelemetry-context-1.4.1.jar:/home/linux/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.4.1-alpha/opentelemetry-semconv-1.4.1-alpha.jar:/home/linux/.m2/repository/io/quarkus/quarkus-jackson/2.1.0.Final/quarkus-jackson-2.1.0.Final.jar:/home/linux/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.12.4/jackson-databind-2.12.4.jar:/home/linux/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.12.4/jackson-annotations-2.12.4.jar:/home/linux/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.12.4/jackson-core-2.12.4.jar:/home/linux/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.12.4/jackson-datatype-jsr310-2.12.4.jar:/home/linux/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.12.4/jackson-datatype-jdk8-2.12.4.jar:/home/linux/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.12.4/jackson-module-parameter-names-2.12.4.jar:/home/linux/.m2/repository/org/apache/kafka/kafka-clients/2.8.0/kafka-clients-2.8.0.jar:/home/linux/.m2/repository/com/github/luben/zstd-jni/1.4.9-1/zstd-jni-1.4.9-1.jar:/home/linux/.m2/repository/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar:/home/linux/.m2/repository/org/xerial/snappy/snappy-java/1.1.8.1/snappy-java-1.1.8.1.jar:/home/linux/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/linux/.m2/repository/io/vertx/vertx-kafka-client/4.1.2/vertx-kafka-client-4.1.2.jar:/home/linux/.m2/repository/io/vertx/vertx-core/4.1.2/vertx-core-4.1.2.jar:/home/linux/.m2/repository/io/netty/netty-common/4.1.65.Final/netty-common-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-buffer/4.1.65.Final/netty-buffer-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-transport/4.1.65.Final/netty-transport-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-handler/4.1.65.Final/netty-handler-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec/4.1.65.Final/netty-codec-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-handler-proxy/4.1.65.Final/netty-handler-proxy-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec-socks/4.1.65.Final/netty-codec-socks-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec-http/4.1.65.Final/netty-codec-http-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec-http2/4.1.65.Final/netty-codec-http2-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-resolver/4.1.65.Final/netty-resolver-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-resolver-dns/4.1.65.Final/netty-resolver-dns-4.1.65.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec-dns/4.1.65.Final/netty-codec-dns-4.1.65.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-smallrye-reactive-messaging/2.1.0.Final/quarkus-smallrye-reactive-messaging-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-mutiny-reactive-streams-operators/2.1.0.Final/quarkus-mutiny-reactive-streams-operators-2.1.0.Final.jar:/home/linux/.m2/repository/org/eclipse/microprofile/reactive-streams-operators/microprofile-reactive-streams-operators-api/1.0.1/microprofile-reactive-streams-operators-api-1.0.1.jar:/home/linux/.m2/repository/org/eclipse/microprofile/reactive-streams-operators/microprofile-reactive-streams-operators-core/1.0.1/microprofile-reactive-streams-operators-core-1.0.1.jar:/home/linux/.m2/repository/io/quarkus/quarkus-mutiny/2.1.0.Final/quarkus-mutiny-2.1.0.Final.jar:/home/linux/.m2/repository/io/smallrye/reactive/mutiny-reactive-streams-operators/0.19.2/mutiny-reactive-streams-operators-0.19.2.jar:/home/linux/.m2/repository/io/smallrye/reactive/mutiny-smallrye-context-propagation/0.19.2/mutiny-smallrye-context-propagation-0.19.2.jar:/home/linux/.m2/repository/io/smallrye/smallrye-context-propagation/1.2.0/smallrye-context-propagation-1.2.0.jar:/home/linux/.m2/repository/io/smallrye/smallrye-context-propagation-api/1.2.0/smallrye-context-propagation-api-1.2.0.jar:/home/linux/.m2/repository/io/smallrye/smallrye-context-propagation-storage/1.2.0/smallrye-context-propagation-storage-1.2.0.jar:/home/linux/.m2/repository/io/quarkus/quarkus-smallrye-context-propagation/2.1.0.Final/quarkus-smallrye-context-propagation-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-smallrye-reactive-messaging-kotlin/2.1.0.Final/quarkus-smallrye-reactive-messaging-kotlin-2.1.0.Final.jar:/home/linux/.m2/repository/io/vertx/vertx-web/4.1.2/vertx-web-4.1.2.jar:/home/linux/.m2/repository/io/vertx/vertx-web-common/4.1.2/vertx-web-common-4.1.2.jar:/home/linux/.m2/repository/io/vertx/vertx-auth-common/4.1.2/vertx-auth-common-4.1.2.jar:/home/linux/.m2/repository/io/vertx/vertx-bridge-common/4.1.2/vertx-bridge-common-4.1.2.jar:/home/linux/.m2/repository/io/quarkus/quarkus-vertx/2.1.0.Final/quarkus-vertx-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-netty/2.1.0.Final/quarkus-netty-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-vertx-core/2.1.0.Final/quarkus-vertx-core-2.1.0.Final.jar:/home/linux/.m2/repository/io/netty/netty-codec-haproxy/4.1.65.Final/netty-codec-haproxy-4.1.65.Final.jar:/home/linux/.m2/repository/io/smallrye/smallrye-fault-tolerance-vertx/5.2.1/smallrye-fault-tolerance-vertx-5.2.1.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-annotation/1.6.0/smallrye-common-annotation-1.6.0.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-health/3.7.1/smallrye-reactive-messaging-health-3.7.1.jar:/home/linux/.m2/repository/org/eclipse/microprofile/health/microprofile-health-api/3.1/microprofile-health-api-3.1.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-provider/3.7.1/smallrye-reactive-messaging-provider-3.7.1.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-api/3.7.1/smallrye-reactive-messaging-api-3.7.1.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-core/2.11.0/smallrye-mutiny-vertx-core-2.11.0.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-runtime/2.11.0/smallrye-mutiny-vertx-runtime-2.11.0.jar:/home/linux/.m2/repository/io/smallrye/reactive/vertx-mutiny-generator/2.11.0/vertx-mutiny-generator-2.11.0.jar:/home/linux/.m2/repository/io/vertx/vertx-codegen/4.1.2/vertx-codegen-4.1.2.jar:/home/linux/.m2/repository/org/jboss/jandex/2.3.0.Final/jandex-2.3.0.Final.jar:/home/linux/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/home/linux/.m2/repository/io/quarkus/quarkus-junit5/2.1.0.Final/quarkus-junit5-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-bootstrap-core/2.1.0.Final/quarkus-bootstrap-core-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-bootstrap-app-model/2.1.0.Final/quarkus-bootstrap-app-model-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-bootstrap-maven-resolver/2.1.0.Final/quarkus-bootstrap-maven-resolver-2.1.0.Final.jar:/home/linux/.m2/repository/org/apache/maven/maven-embedder/3.8.1/maven-embedder-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-settings/3.8.1/maven-settings-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-core/3.8.1/maven-core-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-artifact/3.8.1/maven-artifact-3.8.1.jar:/home/linux/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar:/home/linux/.m2/repository/org/apache/maven/maven-plugin-api/3.8.1/maven-plugin-api-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-model/3.8.1/maven-model-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-model-builder/3.8.1/maven-model-builder-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-builder-support/3.8.1/maven-builder-support-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-api/1.6.2/maven-resolver-api-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-util/1.6.2/maven-resolver-util-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.3.3/maven-shared-utils-3.3.3.jar:/home/linux/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/linux/.m2/repository/com/google/inject/guice/4.2.1/guice-4.2.1-no_aop.jar:/home/linux/.m2/repository/com/google/guava/guava/30.1.1-jre/guava-30.1.1-jre.jar:/home/linux/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/linux/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/linux/.m2/repository/org/codehaus/plexus/plexus-utils/3.2.1/plexus-utils-3.2.1.jar:/home/linux/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.6.0/plexus-classworlds-2.6.0.jar:/home/linux/.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar:/home/linux/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.4/org.eclipse.sisu.plexus-0.3.4.jar:/home/linux/.m2/repository/org/apache/maven/maven-settings-builder/3.8.1/maven-settings-builder-3.8.1.jar:/home/linux/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.25/plexus-interpolation-1.25.jar:/home/linux/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.4/plexus-sec-dispatcher-1.4.jar:/home/linux/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar:/home/linux/.m2/repository/org/apache/maven/maven-resolver-provider/3.8.1/maven-resolver-provider-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/maven-repository-metadata/3.8.1/maven-repository-metadata-3.8.1.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-spi/1.6.2/maven-resolver-spi-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-impl/1.6.2/maven-resolver-impl-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-connector-basic/1.6.2/maven-resolver-connector-basic-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/resolver/maven-resolver-transport-wagon/1.6.2/maven-resolver-transport-wagon-1.6.2.jar:/home/linux/.m2/repository/org/apache/maven/wagon/wagon-http/3.4.3/wagon-http-3.4.3.jar:/home/linux/.m2/repository/org/apache/maven/wagon/wagon-http-shared/3.4.3/wagon-http-shared-3.4.3.jar:/home/linux/.m2/repository/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar:/home/linux/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/linux/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/linux/.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar:/home/linux/.m2/repository/org/apache/maven/wagon/wagon-provider-api/3.4.3/wagon-provider-api-3.4.3.jar:/home/linux/.m2/repository/org/apache/maven/wagon/wagon-file/3.4.3/wagon-file-3.4.3.jar:/home/linux/.m2/repository/io/quarkus/quarkus-bootstrap-gradle-resolver/2.1.0.Final/quarkus-bootstrap-gradle-resolver-2.1.0.Final.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-io/1.6.0/smallrye-common-io-1.6.0.jar:/home/linux/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.4/org.eclipse.sisu.inject-0.3.4.jar:/home/linux/.m2/repository/io/quarkus/quarkus-test-common/2.1.0.Final/quarkus-test-common-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-core-deployment/2.1.0.Final/quarkus-core-deployment-2.1.0.Final.jar:/home/linux/.m2/repository/org/aesh/readline/2.1/readline-2.1.jar:/home/linux/.m2/repository/org/fusesource/jansi/jansi/1.18/jansi-1.18.jar:/home/linux/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/linux/.m2/repository/io/quarkus/gizmo/gizmo/1.0.9.Final/gizmo-1.0.9.Final.jar:/home/linux/.m2/repository/org/ow2/asm/asm-util/9.1/asm-util-9.1.jar:/home/linux/.m2/repository/org/ow2/asm/asm-tree/9.1/asm-tree-9.1.jar:/home/linux/.m2/repository/org/ow2/asm/asm-analysis/9.1/asm-analysis-9.1.jar:/home/linux/.m2/repository/org/ow2/asm/asm/9.1/asm-9.1.jar:/home/linux/.m2/repository/io/quarkus/quarkus-class-change-agent/2.1.0.Final/quarkus-class-change-agent-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-devtools-utilities/2.1.0.Final/quarkus-devtools-utilities-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-builder/2.1.0.Final/quarkus-builder-2.1.0.Final.jar:/home/linux/.m2/repository/org/junit/platform/junit-platform-launcher/1.7.2/junit-platform-launcher-1.7.2.jar:/home/linux/.m2/repository/io/quarkus/quarkus-jsonp-deployment/2.1.0.Final/quarkus-jsonp-deployment-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-jsonp/2.1.0.Final/quarkus-jsonp-2.1.0.Final.jar:/home/linux/.m2/repository/org/glassfish/jakarta.json/1.1.6/jakarta.json-1.1.6.jar:/home/linux/.m2/repository/org/jboss/logging/commons-logging-jboss-logging/1.0.0.Final/commons-logging-jboss-logging-1.0.0.Final.jar:/home/linux/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.2/junit-jupiter-5.7.2.jar:/home/linux/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.2/junit-jupiter-api-5.7.2.jar:/home/linux/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/linux/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/linux/.m2/repository/org/junit/platform/junit-platform-commons/1.7.2/junit-platform-commons-1.7.2.jar:/home/linux/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.2/junit-jupiter-params-5.7.2.jar:/home/linux/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.2/junit-jupiter-engine-5.7.2.jar:/home/linux/.m2/repository/org/junit/platform/junit-platform-engine/1.7.2/junit-platform-engine-1.7.2.jar:/home/linux/.m2/repository/io/quarkus/quarkus-core/2.1.0.Final/quarkus-core-2.1.0.Final.jar:/home/linux/.m2/repository/jakarta/enterprise/jakarta.enterprise.cdi-api/2.0.2/jakarta.enterprise.cdi-api-2.0.2.jar:/home/linux/.m2/repository/jakarta/el/jakarta.el-api/3.0.3/jakarta.el-api-3.0.3.jar:/home/linux/.m2/repository/jakarta/interceptor/jakarta.interceptor-api/1.2.5/jakarta.interceptor-api-1.2.5.jar:/home/linux/.m2/repository/jakarta/inject/jakarta.inject-api/1.0/jakarta.inject-api-1.0.jar:/home/linux/.m2/repository/io/quarkus/quarkus-ide-launcher/2.1.0.Final/quarkus-ide-launcher-2.1.0.Final.jar:/home/linux/.m2/repository/io/quarkus/quarkus-development-mode-spi/2.1.0.Final/quarkus-development-mode-spi-2.1.0.Final.jar:/home/linux/.m2/repository/io/smallrye/config/smallrye-config/2.4.2/smallrye-config-2.4.2.jar:/home/linux/.m2/repository/io/smallrye/config/smallrye-config-core/2.4.2/smallrye-config-core-2.4.2.jar:/home/linux/.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/2.0/microprofile-config-api-2.0.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-expression/1.6.0/smallrye-common-expression-1.6.0.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-function/1.6.0/smallrye-common-function-1.6.0.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-constraint/1.6.0/smallrye-common-constraint-1.6.0.jar:/home/linux/.m2/repository/io/smallrye/common/smallrye-common-classloader/1.6.0/smallrye-common-classloader-1.6.0.jar:/home/linux/.m2/repository/io/smallrye/config/smallrye-config-common/2.4.2/smallrye-config-common-2.4.2.jar:/home/linux/.m2/repository/org/jboss/logmanager/jboss-logmanager-embedded/1.0.9/jboss-logmanager-embedded-1.0.9.jar:/home/linux/.m2/repository/org/jboss/logging/jboss-logging-annotations/2.2.1.Final/jboss-logging-annotations-2.2.1.Final.jar:/home/linux/.m2/repository/org/jboss/threads/jboss-threads/3.4.0.Final/jboss-threads-3.4.0.Final.jar:/home/linux/.m2/repository/org/jboss/slf4j/slf4j-jboss-logmanager/1.1.0.Final/slf4j-jboss-logmanager-1.1.0.Final.jar:/home/linux/.m2/repository/org/graalvm/sdk/graal-sdk/21.1.0/graal-sdk-21.1.0.jar:/home/linux/.m2/repository/org/wildfly/common/wildfly-common/1.5.4.Final-format-001/wildfly-common-1.5.4.Final-format-001.jar:/home/linux/.m2/repository/io/quarkus/quarkus-bootstrap-runner/2.1.0.Final/quarkus-bootstrap-runner-2.1.0.Final.jar:/home/linux/.m2/repository/com/thoughtworks/xstream/xstream/1.4.17/xstream-1.4.17.jar:/home/linux/.m2/repository/io/github/x-stream/mxparser/1.2.1/mxparser-1.2.1.jar:/home/linux/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-messaging-in-memory/3.7.1/smallrye-reactive-messaging-in-memory-3.7.1.jar:/home/linux/.m2/repository/org/jboss/logging/jboss-logging/3.4.2.Final/jboss-logging-3.4.2.Final.jar:/home/linux/.m2/repository/io/smallrye/reactive/smallrye-reactive-converter-api/2.6.0/smallrye-reactive-converter-api-2.6.0.jar:/home/linux/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/linux/.m2/repository/io/smallrye/reactive/mutiny/0.19.2/mutiny-0.19.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/linux"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="io.netty.allocator.maxOrder" value="3"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/linux/Downloads/kafka-quickstart/processor"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/linux/Downloads/kafka-quickstart/processor/target/surefire/surefirebooter6562396036037876866.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.11+9-Ubuntu-0ubuntu2.20.04"/>
+    <property name="user.name" value="linux"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.8.0-63-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="sun.nio.ch.bugLevel" value=""/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/linux/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="quarkus.log.file.path" value="target/quarkus.log"/>
+    <property name="java.version" value="11.0.11"/>
+    <property name="user.dir" value="/home/linux/Downloads/kafka-quickstart/processor"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="vertx.disableDnsResolver" value="true"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.util.logging.manager" value="org.jboss.logmanager.LogManager"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="11.0.11+9-Ubuntu-0ubuntu2.20.04"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="io.netty.machineId" value="38:b1:b0:99:1b:67:5d:14"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="testProcessor" classname="org.acme.kafka.processor.QuoteProcessorTest" time="0.44">
+    <error type="org.apache.kafka.common.KafkaException"><![CDATA[org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.acme.kafka.processor.QuoteProcessorTest.setUp(QuoteProcessorTest.java:41)
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.acme.kafka.processor.QuoteProcessorTest.setUp(QuoteProcessorTest.java:41)
+]]></error>
+    <system-out><![CDATA[2021-08-04 10:43:36,585 WARN  [io.qua.arc.dep.SplitPackageProcessor] (build-41) Detected a split package usage which is considered a bad practice and should be avoided. Following packages were detected in multiple archives: 
+- "io.smallrye.reactive.messaging.connectors" found in [io.smallrye.reactive:smallrye-reactive-messaging-in-memory, io.smallrye.reactive:smallrye-reactive-messaging-provider]
+2021-08-04 10:43:42,776 WARN  [io.qua.kaf.cli.dep.DevServicesKafkaProcessor] (build-8) Docker isn't working, please configure the Kafka bootstrap servers property (kafka.bootstrap.servers).
+2021-08-04 10:43:45,770 WARN  [io.sma.rea.mes.kafka] (main) SRMSG18216: No `group.id` set in the configuration, generate a random id: 3bb5a04a-342c-458b-8727-723963d5d605
+2021-08-04 10:43:45,776 INFO  [io.sma.rea.mes.kafka] (main) SRMSG18229: Configured topics for channel 'requests': [quote-requests]
+2021-08-04 10:43:46,033 INFO  [io.sma.rea.mes.kafka] (main) SRMSG18213: Setting bootstrap.servers to localhost:9092
+2021-08-04 10:43:46,034 INFO  [io.sma.rea.mes.kafka] (main) SRMSG18214: Key deserializer omitted, using String as default
+2021-08-04 10:43:46,035 INFO  [io.sma.rea.mes.kafka] (main) SRMSG18234: Auto-commit disabled for channel requests
+2021-08-04 10:43:46,188 INFO  [org.apa.kaf.cli.con.ConsumerConfig] (main) ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = kafka-consumer-requests
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 3bb5a04a-342c-458b-8727-723963d5d605
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class io.smallrye.reactive.messaging.kafka.fault.DeserializerWrapper
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 10000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.smallrye.reactive.messaging.kafka.fault.DeserializerWrapper
+
+2021-08-04 10:43:47,753 INFO  [org.apa.kaf.com.uti.AppInfoParser] (main) Kafka version: 2.8.0
+2021-08-04 10:43:47,753 INFO  [org.apa.kaf.com.uti.AppInfoParser] (main) Kafka commitId: ebb1d6e21cc92130
+2021-08-04 10:43:47,754 INFO  [org.apa.kaf.com.uti.AppInfoParser] (main) Kafka startTimeMs: 1628055827749
+2021-08-04 10:43:47,784 INFO  [io.sma.rea.mes.kafka] (main) SRMSG18240: 'throttled' commit strategy used for channel 'requests'
+2021-08-04 10:43:47,787 INFO  [io.sma.rea.mes.kafka] (main) SRMSG18232: Will commit for group '3bb5a04a-342c-458b-8727-723963d5d605' every 5000 milliseconds.
+2021-08-04 10:43:47,788 INFO  [io.sma.rea.mes.kafka] (main) SRMSG18236: Will mark throttled commit strategy for group '3bb5a04a-342c-458b-8727-723963d5d605' as unhealthy if records go more than 60000 milliseconds without being processed.
+2021-08-04 10:43:47,956 INFO  [io.sma.rea.mes.kafka] (main) SRMSG18213: Setting bootstrap.servers to localhost:9092
+2021-08-04 10:43:47,957 INFO  [io.sma.rea.mes.kafka] (main) SRMSG18248: Key serializer omitted, using String as default
+2021-08-04 10:43:47,957 INFO  [io.sma.rea.mes.kafka] (main) SRMSG18237: Setting client.id for Kafka producer to kafka-producer-quotes
+2021-08-04 10:43:48,492 INFO  [org.apa.kaf.cli.pro.ProducerConfig] (main) ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = kafka-producer-quotes
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 10000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.quarkus.kafka.client.serialization.ObjectMapperSerializer
+
+2021-08-04 10:43:48,561 INFO  [org.apa.kaf.com.uti.AppInfoParser] (main) Kafka version: 2.8.0
+2021-08-04 10:43:48,562 INFO  [org.apa.kaf.com.uti.AppInfoParser] (main) Kafka commitId: ebb1d6e21cc92130
+2021-08-04 10:43:48,562 INFO  [org.apa.kaf.com.uti.AppInfoParser] (main) Kafka startTimeMs: 1628055828561
+2021-08-04 10:43:49,583 INFO  [org.apa.kaf.cli.con.KafkaConsumer] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-requests, groupId=3bb5a04a-342c-458b-8727-723963d5d605] Subscribed to topic(s): quote-requests
+2021-08-04 10:43:49,631 INFO  [io.quarkus] (main) Quarkus 2.1.0.Final on JVM started in 16.001s. 
+2021-08-04 10:43:49,681 INFO  [io.quarkus] (main) Profile test activated. 
+2021-08-04 10:43:49,681 INFO  [io.quarkus] (main) Installed features: [cdi, kafka-client, smallrye-context-propagation, smallrye-reactive-messaging, smallrye-reactive-messaging-kafka, vertx]
+2021-08-04 10:43:50,407 INFO  [org.apa.kaf.cli.con.ConsumerConfig] (main) ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = []
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-test-group-id-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group-id
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.quarkus.kafka.client.serialization.ObjectMapperDeserializer
+
+2021-08-04 10:43:50,418 INFO  [org.apa.kaf.com.met.Metrics] (main) Metrics scheduler closed
+2021-08-04 10:43:50,418 INFO  [org.apa.kaf.com.met.Metrics] (main) Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-08-04 10:43:50,420 INFO  [org.apa.kaf.com.met.Metrics] (main) Metrics reporters closed
+2021-08-04 10:43:50,421 INFO  [org.apa.kaf.com.uti.AppInfoParser] (main) App info kafka.consumer for consumer-test-group-id-1 unregistered
+2021-08-04 10:43:50,604 INFO  [org.apa.kaf.cli.Metadata] (kafka-producer-network-thread | kafka-producer-quotes) [Producer clientId=kafka-producer-quotes] Cluster ID: y_-M44b1QGythrlXWkQffg
+2021-08-04 10:43:50,603 INFO  [org.apa.kaf.cli.Metadata] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-requests, groupId=3bb5a04a-342c-458b-8727-723963d5d605] Cluster ID: y_-M44b1QGythrlXWkQffg
+]]></system-out>
+  </testcase>
+</testsuite>

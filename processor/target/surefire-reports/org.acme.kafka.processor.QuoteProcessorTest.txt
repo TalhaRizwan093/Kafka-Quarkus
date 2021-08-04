@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: org.acme.kafka.processor.QuoteProcessorTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 20.012 s <<< FAILURE! - in org.acme.kafka.processor.QuoteProcessorTest
+org.acme.kafka.processor.QuoteProcessorTest.testProcessor  Time elapsed: 0.44 s  <<< ERROR!
+org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.acme.kafka.processor.QuoteProcessorTest.setUp(QuoteProcessorTest.java:41)
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.acme.kafka.processor.QuoteProcessorTest.setUp(QuoteProcessorTest.java:41)
+
