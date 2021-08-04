@@ -1,19 +1,13 @@
-stages:
-    - build
-    
-docker-build-master:
-  image: tmaier/docker-compose
+image: tmaier/docker-compose:latest
+
+services:
+  - docker:dind
+
+before_script:
+  - docker info
+  - docker-compose --version
+
+build image:
   stage: build
-
-  services:
-    - docker:dind
-
-  before_script:
-    - docker login -u "$CI_REG_USERNAME" -p "$CI_REG_TOKEN" $CI_REGISTRY
-
   script:
     - docker-compose build
-    - docker push $COMPOSE_TAG
-
-  after_script:
-    - docker logout $CI_REGISTRY
