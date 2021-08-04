@@ -1,18 +1,19 @@
 stages:
-    - test
+    - build
     
-docker-development-test:
-
-
+docker-build-master:
   image: tmaier/docker-compose
+  stage: build
 
   services:
     - docker:dind
 
-  stage: test
-
   before_script:
-    - docker-compose build --no-cache
+    - docker login -u "$CI_REG_USERNAME" -p "$CI_REG_TOKEN" $CI_REGISTRY
 
   script:
-    - docker-compose run ci-series python -m unittest discover -s ./tests
+    - docker-compose build
+    - docker push $COMPOSE_TAG
+
+  after_script:
+    - docker logout $CI_REGISTRY
