@@ -1,0 +1,18 @@
+stages:
+    - test
+    
+docker-development-test:
+
+
+  image: tmaier/docker-compose
+
+  services:
+    - docker:dind
+
+  stage: test
+
+  before_script:
+    - docker-compose build --no-cache
+
+  script:
+    - docker-compose run ci-series python -m unittest discover -s ./tests
